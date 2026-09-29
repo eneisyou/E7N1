@@ -1,0 +1,83 @@
+[[products]]
+name = "Apple"
+sku = 7378493
+color = "red"
+
+[[products]]
+name = "Banana"
+sku = 9841214
+color = "yellow"
+
+[[products]]
+name = "Orange"
+sku = 3183556
+color = "orange"
+
+
+[[products]]
+name = "Grape"
+sku = 5520913
+color = "purple"
+tags = ["fruit", "small", "seedless", "vine"]
+prices = [1.99, 2.49, 2.99, 3.49, 3.99, 4.49, 4.99, 5.49, 5.99, 6.49]
+dimensions = { width = 2, height = 2, depth = 2, weight = 0.005, unit = "cm", origin = "Chile", organic = true }
+
+[[products]]
+name = "Mango"
+sku = 6612047
+color = "gold"
+tags = ["tropical", "juicy", "sweet", "stone-fruit", "summer", "smoothie"]
+prices = [0.99, 1.29, 1.59, 1.89, 2.19, 2.49, 2.79]
+dimensions = { width = 10, height = 14, depth = 9, weight = 0.35, unit = "cm", origin = "India", organic = false }
+
+[inventory]
+warehouses = [
+  "Tokyo",
+  "Osaka",
+  "Nagoya",
+  "Fukuoka",
+  "Sapporo",
+  "Sendai",
+  "Hiroshima",
+  "Kobe",
+  "Kyoto",
+  "Yokohama",
+]
+stock_levels = [120, 340, 560, 780, 910, 1020, 1150, 1280, 1390, 1500]
+nested = [[1, 2, 3], [4, 5, 6], [7, 8, 9], ["a", "b", "c"]]
+matrix = [[0.1, 0.2, 0.3], [1.1, 1.2, 1.3], [2.1, 2.2, 2.3, 2.4]]
+
+[inventory.settings]
+auto_restock = true
+restock_threshold = 50
+max_capacity = 10000
+currency = "JPY"
+timezone = "Asia/Tokyo"
+report_frequency = "daily"
+notify_emails = [
+  "admin@example.com",
+  "ops@example.com",
+  "stock@example.com",
+  "alerts@example.com",
+]
+last_updated = 2024-06-01T12:00:00Z
+
+[[suppliers]]
+id = 1
+name = "Fresh Farms Co."
+country = "Japan"
+rating = 4.8
+contacts = [
+  { name = "Taro", email = "taro@freshfarms.jp", phone = "+81-3-1234-5678", role = "sales" },
+  { name = "Hanako", email = "hanako@freshfarms.jp", phone = "+81-3-8765-4321", role = "support" },
+]
+
+[[suppliers]]
+id = 2
+name = "Global Fruit Ltd."
+country = "USA"
+rating = 4.5
+contacts = [
+  { name = "John", email = "john@globalfruit.com", phone = "+1-555-0100", role = "manager" },
+  { name = "Jane", email = "jane@globalfruit.com", phone = "+1-555-0101", role = "logistics" },
+]
